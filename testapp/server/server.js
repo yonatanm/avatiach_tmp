@@ -4,7 +4,7 @@ const schema = require('./gql/schema')
 const bodyParser = require('body-parser');
 
 
-const APP_PORT = 3000
+const APP_PORT = process.env.PORT || 3456
 
 const app = express();
 

@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "debug": "/home/yonatan/.nvm/versions/node/v10.13.0/bin/node index.js"
+  "engines": {
+    "node": "10.x"
   },
-  "author": "",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "author": "yonatanm",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
