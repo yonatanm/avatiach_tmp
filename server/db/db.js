@@ -1,12 +1,22 @@
 var mysql = require('promise-mysql');
 
-const pool = mysql.createPool({
+const dev_dbConfig = {
   host: 'localhost',
+  database: 'avatiach_com',
   user: 'avatiach_db',
   password: 'Bananas38',
-  database: 'avatiach_com',
   connectionLimit: 10
-});
+}
+
+const prod_dbConfig = {
+  host: 'www.avatiach.com',
+  database: 'avatiach_heroku',
+  user: 'avatiach_db_her',
+  password: 'Bananas38_heroku',
+  connectionLimit: 10
+}
+
+const pool = mysql.createPool(prod_dbConfig);
 
 const runQuery = function (query, params) {
   return pool.getConnection().then(function (connection) {
