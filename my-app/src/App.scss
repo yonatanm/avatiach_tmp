@@ -1,0 +1,37 @@
+.App {
+  display: grid;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-columns: 2fr 5fr 3fr;
+  grid-template-areas: 
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+  grid-gap: .75em;
+  @media(max-width: 480px){
+    display: block;
+  }  
+}
+
+
+.header{
+  grid-area: header;
+  background-color: teal;
+}
+.nav{
+  grid-area: nav;
+  background-color: tomato;
+}
+.main{
+  grid-area: main;
+  background-color: lightblue;
+}
+.aside{
+  grid-area: aside;
+  background-color: orange;
+}
+.footer{
+  grid-area: footer;
+  background-color: lightgreen;
+}
+
+
